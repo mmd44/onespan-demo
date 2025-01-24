@@ -11,23 +11,21 @@ import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
-import org.junit.runner.RunWith
-import org.mockito.Mock
 import org.mockito.Mockito.verify
 import org.mockito.Mockito.`when`
-import org.mockito.junit.MockitoJUnitRunner
+import org.mockito.kotlin.mock
 
-@RunWith(MockitoJUnitRunner::class)
 class BreedsViewModelTest {
 
-    @Mock
     private lateinit var repository: CatsRepository
 
     private lateinit var viewModel: CatsViewModel
 
     @Before
     fun setUp() {
-        // Mock repository's getBreedsPagingData to return a flow of PagingData
+
+        repository = mock<CatsRepository>()
+
         `when`(repository.getPagedBreeds()).thenReturn(
             flowOf(
                 PagingData.from(

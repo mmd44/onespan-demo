@@ -8,7 +8,7 @@ import com.onespan.android.interview.features.cats.model.Breed
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-class CatsRepository @Inject constructor(
+open class CatsRepository @Inject constructor(
     private val apiService: CatService
 ) {
     fun getPagedBreeds(): Flow<PagingData<Breed>> {
