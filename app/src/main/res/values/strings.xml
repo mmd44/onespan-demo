@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Android Intermediate Interview</string>
+
+    <string name="an_error_has_occurred">An Error has Occurred</string>
+
+    <string name="unknown">Unknown</string>
+    <string name="no_coat">No Coat</string>
+    <string name="cat_breeds">Cat Breeds</string>
+    <string name="country_s">Country: %s</string>
+    <string name="pattern_s">Pattern: %s</string>
+
+</resources>
